@@ -17,4 +17,9 @@ public class TestServiceImpl implements TestService {
     public ServerResponse testIdempotence() {
         return ServerResponse.success("testIdempotence: success");
     }
+
+    @Override
+    public ServerResponse accessLimit() {
+        return ServerResponse.success("accessLimit: success");
+    }
 }

@@ -11,4 +11,6 @@ import com.wyx.idempotent.common.ServerResponse;
 public interface TestService {
 
     ServerResponse testIdempotence();
+
+    ServerResponse accessLimit();
 }

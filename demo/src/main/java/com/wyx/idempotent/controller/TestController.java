@@ -1,5 +1,6 @@
 package com.wyx.idempotent.controller;
 
+import com.wyx.idempotent.annotation.AccessLimit;
 import com.wyx.idempotent.annotation.ApiIdempotent;
 import com.wyx.idempotent.common.ServerResponse;
 import com.wyx.idempotent.service.TestService;
@@ -27,5 +28,11 @@ public class TestController {
     @ApiIdempotent
     public ServerResponse testIdempotence(){
         return testService.testIdempotence();
+    }
+
+    @PostMapping("testAccessLimit")
+    @AccessLimit(maxCount = 5,seconds = 30)
+    public ServerResponse testAccessLimit(){
+        return testService.accessLimit();
     }
 }
