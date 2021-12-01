@@ -19,3 +19,9 @@ src/main/webapp/WEB-INF/logs
 *.lock
 bin/
 *.iml
+**/.gitignore
+**/HELP.md
+**/mvnw
+**/mvnw.cmd
+**/.mvn
+**/target
